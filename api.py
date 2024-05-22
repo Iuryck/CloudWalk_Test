@@ -67,7 +67,7 @@ def send_transactions():
 
 
     # Calculate distance from correlation denied X approved
-    clf_linear = joblib.load('Models\\linearR_denied.save')
+    clf_linear = joblib.load('case_CloudWalk\\Models\\linearR_denied.save')
     x_approved = np.array(X.approved).reshape(-1,1)
     X['denied_sqr_distance'] = (X.denied - clf_linear.predict(x_approved))**2
 
@@ -83,10 +83,10 @@ def send_transactions():
     
 
     # Load Models
-    clf_failed = joblib.load('Models\\clf_failed.save')
-    clf_reversed = joblib.load('Models\\clf_reversed.save')
-    clf_denied = joblib.load('Models\\clf_denied.save')
-    scaler = joblib.load('Models\\scaler.save')
+    clf_failed = joblib.load('case_CloudWalk\\Models\\clf_failed.save')
+    clf_reversed = joblib.load('case_CloudWalk\\Models\\clf_reversed.save')
+    clf_denied = joblib.load('case_CloudWalk\\Models\\clf_denied.save')
+    scaler = joblib.load('case_CloudWalk\\Models\\scaler.save')
 
 
     # Pre processing
