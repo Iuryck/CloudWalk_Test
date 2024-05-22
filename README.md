@@ -1,5 +1,7 @@
 # Test Case for Cloud Walk - Monitoring Analyst
 
+![alt text](docs/dash.png)
+
 Test case focused on anomaly analysis and monitoring for the position of Business Monitoring Intelligence Analyst. The CSV files provided have data on transactions from points of sale. 
 First task involves CSV files *checkout* 1 and 2, second task involves CSV files *transactions* 1 and 2.
 
