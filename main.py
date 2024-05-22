@@ -121,7 +121,13 @@ def update_figure(n_intervals):
                   np.sum(live_data.failed)]
         names = ['Approved','Denied','Reversed','Failed']
 
-    pie_chart = px.pie(values=values, names=names, hole=.3)
+
+    
+    pie_chart = px.pie(values=values, names=names, hole=.3, title='20min Window', color=names,
+                        color_discrete_map={'Approved':'rgb(0, 188, 69)',
+                                 'Denied':'rgb(242, 8, 0)',
+                                 'Failed':'rgb(126, 05, 208)',
+                                 'Reversed':'rgb(0, 84, 230)'})
 
     return fig, f'Monitoring - {data.time.values[0]}', pie_chart
 
