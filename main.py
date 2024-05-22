@@ -25,7 +25,7 @@ app.layout = html.Div([
 
 
 def data_gen():
-    df = pd.read_csv('case_CloudWalk\\transactions_2.csv')
+    df = pd.read_csv('transactions_2.csv')
 
     df = duckdb.query("""
         SELECT time, coalesce(approved,0) as approved, coalesce(denied,0) as denied, coalesce(failed,0) as failed, coalesce((backend_reversed + reversed),0) as reversed, coalesce(refunded,0) as refunded, coalesce(processing,0) as processing
