@@ -125,4 +125,4 @@ def send_transactions():
     
     
 
-app.run()
+app.run(threaded=True)
