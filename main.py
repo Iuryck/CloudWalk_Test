@@ -108,11 +108,11 @@ def update_figure(n_intervals):
 
     fig.update_layout(xaxis_rangeslider_visible=False, height=400)
 
-    if len(feed) >4:
-        values = [np.sum(live_data.approved.values[-5:]),
-                  np.sum(live_data.denied.values[-5:]),
-                  np.sum(live_data.reversed.values[-5:]),
-                  np.sum(live_data.failed.values[-5:])]
+    if len(feed) >20:
+        values = [np.sum(live_data.approved.values[-20:]),
+                  np.sum(live_data.denied.values[-20:]),
+                  np.sum(live_data.reversed.values[-20:]),
+                  np.sum(live_data.failed.values[-20:])]
         names = ['Approved','Denied','Reversed','Failed']
     else:
         values = [np.sum(live_data.approved),
